@@ -2,6 +2,6 @@ services:
   - type: web
     name: flask-app
     env: python
-    buildCommand: ""  # اگر نیاز به build خاصی نداری، می‌تونی خالی بذاری
+    buildCommand: pip install -r requirements.txt  # اگر نیاز به build خاصی نداری، می‌تونی خالی بذاری
     startCommand: gunicorn app:app
     plan: free  # یا یکی از پلن‌های پرداختی دیگر
